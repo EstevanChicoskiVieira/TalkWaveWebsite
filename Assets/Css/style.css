@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.estilo-links a, footer .footer-div2 .link a, footer .footer-div1 .contato a, footer .footer-div1 .navegation nav a, header .header-div2 nav a {
+  color: #000;
+  font-size: 15pt;
+  text-decoration: none;
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+.estilo-links a::after, footer .footer-div2 .link a::after, footer .footer-div1 .contato a::after, footer .footer-div1 .navegation nav a::after, header .header-div2 nav a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: #0de5fc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s ease-in-out;
+}
+.estilo-links a:hover, footer .footer-div2 .link a:hover, footer .footer-div1 .contato a:hover, footer .footer-div1 .navegation nav a:hover, header .header-div2 nav a:hover {
+  color: #0de5fc;
+}
+.estilo-links a:hover::after, footer .footer-div2 .link a:hover::after, footer .footer-div1 .contato a:hover::after, footer .footer-div1 .navegation nav a:hover::after, header .header-div2 nav a:hover::after {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5vh 0 5vh;
+  position: fixed;
+  transition: 0.4s ease-in-out;
+}
+header .header-div1 {
+  width: 20%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+header .header-div2 {
+  width: 60%;
+  height: 100%;
+}
+header .header-div2 nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header .header-div2 nav a {
+  color: #fff;
+}
+
+main .main-div1 {
+  width: 100%;
+  height: 90vh;
+  background: url(../Images/banner-index.png) fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .main-div1 .filter {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5019607843);
+  display: flex;
+  padding-top: 5vh;
+}
+main .main-div1 .filter .logo {
+  width: 45%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+main .main-div1 .filter .text {
+  width: 55%;
+  height: 100%;
+  padding: 24vh 15vh 15vh 0;
+  color: #fff;
+}
+main .main-div1 .filter .text h1 {
+  font-size: 30pt;
+  padding-bottom: 3vh;
+}
+main .main-div1 .filter .text h2 {
+  font-size: 17pt;
+  padding-bottom: 7vh;
+}
+main .main-div1 .filter .text a {
+  padding: 2.5vh;
+  background-color: #703db3;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12pt;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+main .main-div1 .filter .text a:hover {
+  background-color: #8155bb;
+}
+main .main-div2 {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 18vh 15vh 18vh;
+}
+main .main-div2 .card {
+  width: 35vh;
+  height: 35vh;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  padding: 2vh;
+  text-align: center;
+  color: #fff;
+}
+main .main-div2 #card1 {
+  background-color: #cb1184;
+}
+main .main-div2 #card2 {
+  background-color: #703db3;
+}
+main .main-div2 #card3 {
+  background-color: #0de5fc;
+}
+main .main-div2 #card4 {
+  background-color: #121869;
+}
+main .main-div3 {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+}
+main .main-div3 .imagem {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+main .main-div3 .imagem .banner {
+  width: 55vh;
+  height: 55vh;
+  background: url(../Images/banner2.png) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .main-div3 .imagem .banner .filter {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.6588235294);
+  /*img{
+      animation: float 3s infinite ease-in-out;
+  }*/
+}
+main .main-div3 .texto {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10vh 20vh 10vh 0;
+  gap: 2vh;
+}
+main .main-div3 .texto h1 {
+  font-size: 35pt;
+  font-family: "Raleway", sans-serif;
+  color: #121869;
+}
+
+footer {
+  width: 100%;
+  height: 30vh;
+  background: #e7e7e7;
+  padding: 0 20vh 0 20vh;
+}
+footer .footer-div1 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dotted #000;
+}
+footer .footer-div1 .navegation {
+  width: 50%;
+  height: 100%;
+}
+footer .footer-div1 .navegation nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .footer-div2 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .footer-div2 .direitos {
+  width: 20%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+footer .footer-div2 .linguagens {
+  width: 40%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+footer .footer-div2 .link {
+  width: 10%;
+  height: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.ativo {
+  width: 100%;
+  height: 12vh;
+  background-color: #e7e7e7;
+}
+.ativo .header-div2 nav a {
+  color: #000;
+}
+.ativo #imagem1 {
+  display: none;
+}
+.ativo #imagem2 {
+  display: block;
+}
+
+#imagem2 {
+  display: none;
+}
+
+::selection {
+  background-color: rgba(203, 17, 132, 0.4235294118);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #703db3;
+  border: 0px;
+  border-radius: 3px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

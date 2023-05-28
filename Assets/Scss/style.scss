@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+$azul: #0de5fc;
+$roxo: #703db3;
+$rosa: #cb1184;
+$blue: #121869;
+
+//extends
+
+.estilo-links{
+    a{
+        color: #000;
+        font-size: 15pt;
+        text-decoration: none;
+        position: relative;
+        transition: .2s ease-in-out;
+
+        &::after{
+            content: " ";
+            width: 0%;
+            height: 2px;
+            background-color: $azul;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: .2s ease-in-out;
+        }
+
+        &:hover{
+            color: $azul;
+
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+}
+
+header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vh 0 5vh;
+    position: fixed;
+    transition: .4s ease-in-out;
+
+    .header-div1{
+        width: 20%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .header-div2{
+        width: 60%;
+        height: 100%;
+        
+        nav{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            
+            @extend .estilo-links;
+            
+            a{
+                color: #fff;
+            }
+        }
+    }
+}
+
+main{
+    .main-div1{
+        width: 100%;
+        height: 90vh;
+        background: url(../Images/banner-index.png) fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .filter{
+            width: 100%;
+            height: 100%;
+            background: #00000080;
+            display: flex;
+            padding-top: 5vh;
+
+            .logo{
+                width: 45%;
+                height: 100%;
+                display: grid;
+                place-items: center;
+            }
+
+            .text{
+                width: 55%;
+                height: 100%;
+                padding: 24vh 15vh 15vh 0;
+                color: #fff;
+
+                h1{
+                    font-size: 30pt;
+                    padding-bottom: 3vh;
+                }
+
+                h2{
+                    font-size: 17pt;
+                    padding-bottom: 7vh;
+                }
+
+                a{
+                    padding: 2.5vh;
+                    background-color: $roxo;
+                    border-radius: 5px;
+                    color: #fff;
+                    font-size: 12pt;
+                    text-decoration: none;
+                    transition: .3s ease-in-out;
+                    
+                    &:hover{
+                        background-color: #8155bb;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-div2{
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 18vh 15vh 18vh;
+
+        .card{
+            width: 35vh;
+            height: 35vh;
+            border-radius: 15px;
+            display: grid;
+            place-items: center;
+            padding: 2vh;
+            text-align: center;
+            color: #fff;
+        }
+
+        #card1{
+            background-color: $rosa;
+        }
+
+        #card2{
+            background-color: $roxo;
+        }
+
+        #card3{
+            background-color: $azul;
+        }
+
+        #card4{
+            background-color: $blue;
+        }
+    }
+
+    .main-div3{
+        width: 100%;
+        height: 80vh;
+        display: flex;
+
+        .imagem{
+            width: 50%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+
+            .banner{
+                width: 55vh;
+                height: 55vh;
+                background: url(../Images/banner2.png) center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                .filter{
+                    width: 100%;
+                    height: 100%;
+                    display: grid;
+                    place-items: center;
+                    background: #000000a8;
+
+                    /*img{
+                        animation: float 3s infinite ease-in-out;
+                    }*/
+                }
+            }
+        }
+        
+        .texto{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10vh 20vh 10vh 0;
+            gap: 2vh;
+
+            h1{
+                font-size: 35pt;
+                font-family: 'Raleway', sans-serif;
+                color: $blue;
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    height: 30vh;
+    background: #e7e7e7;
+    padding: 0 20vh 0 20vh;
+
+    .footer-div1{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px dotted #000;
+
+        .navegation{
+            width: 50%;
+            height: 100%;
+
+            nav{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+    
+                @extend .estilo-links;
+            }
+        }
+
+        .contato{
+            @extend .estilo-links;
+        }
+    }
+
+    .footer-div2{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .direitos{
+            width: 20%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        .linguagens{
+            width: 40%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        .link{
+            width: 10%;
+            height: 30%;
+            display: grid;
+            place-items: center;
+
+            @extend .estilo-links;
+        }
+    }
+}
+
+//estilos extras 
+
+.ativo{
+    width: 100%;
+    height: 12vh;
+    background-color: #e7e7e7;
+    
+    .header-div2{
+        nav{
+            a{
+                color: #000;
+            }
+        }
+    }
+
+    #imagem1{
+        display: none;
+    }
+
+    #imagem2{
+        display: block;
+    }
+}
+
+#imagem2{
+    display: none;
+}
+
+::selection{
+    background-color: #cb11846c;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: $roxo;
+    border: 0px;
+    border-radius: 3px;
+}
+
+//animações
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(-5px);
+    } 50%{
+        transform: translateY(5px);
+    }
+}
+
